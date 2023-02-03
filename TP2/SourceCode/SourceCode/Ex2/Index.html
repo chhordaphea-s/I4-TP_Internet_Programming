@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/js/tween.umd.js"></script>
+
+</head>
+<body>
+    <button id="button" onmouseover="init();">
+        Click me 😑
+    </button>
+    <script>
+        var btn = document.getElementById("button")
+
+        function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)
+
+        const moveFromSourceToDest = (startX, startY, EndX, EndY) => {
+            const coords = { x: startX, y: startY }
+            const tween = new TWEEN.Tween()
+            .to({ x: EndX, y: EndY}, 100)
+            .easing(TWEEN.Easing.Quadratic.Out)
+
+            .onUpdate(() => {
+                console.log(`${coords.x}px, ${coords.y}px`);
+                
+                btn.style.setProperty('transform', `translate(${coords.x}px, ${coords.y}px`)
+            })
+            .start()
+        }
+
+        function init() {
+            const endX = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const endY = Math.random() * (window.innerHeight - btn.offsetHeight);
+            const startX = endX+100;
+            const startY = endY+100; 
+
+            moveFromSourceToDest(startX,startY,endX,endY);
+        }
+
+        ["mouseover","click"].forEach(function (btn) {
+            console.log("Mouseover Or Click");
+
+            btn.addEventListener(btn, function (event) {
+                init();
+            });
+
+        });
+        
+    </script>
+</body>
+</html>
+
+

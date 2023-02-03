@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="/../js/opencv.js"></script>
+
+
+</head>
+<body>
+    <div class="parent">
+        <div class="left-container">
+            <canvas id="canvas"></canvas>
+            <div class="footer">
+                <p>Canvas🐯: Please show your face on me</p>                
+                <div class="btn-name">
+                    <button id="playButton" title="Play">Play</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="right-header"><p>Multi projection with canvas</p></div>
+            <div class="video-grid">
+                <div class="row">
+                    <div class="col"><canvas class="grid-video" id="r1-c1"></canvas></div>
+                    <div class="col"><canvas class="grid-video" id="r1-c2"></canvas></div>
+                    <div class="col"><canvas class="grid-video" id="r1-c3"></canvas></div>
+                </div>
+                <div class="row">
+                    <div class="col"><canvas class="grid-video" id="r2-c1"></canvas></div>
+                    <div class="col"><canvas class="grid-video" id="r2-c2"></canvas></div>
+                    <div class="col"><canvas class="grid-video" id="r2-c3"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var playButton = document.getElementById("playButton");
+        playButton.addEventListener('click', buttonToggle)
+        
+            var playing = true;
+
+            function buttonToggle() {
+                console.log("Title: ", playButton.title);
+
+                if (playButton.title == "Play") {
+                    playButton.title = "Pause"
+                    document.getElementById("playButton").innerHTML = "Pause"
+                    playing = true
+                    loop();
+                } else {
+                    playButton.title = "Play"
+                    document.getElementById("playButton").innerHTML = "Play"
+                    playing = false;
+                    clearCanvas();
+                }
+                
+            }
+
+        navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: true
+        }).then ((stream) => {
+            video.srcObject = stream;
+        }).catch((err) => {
+            console.log('navigator.MediaDevices.getUserMedia error: ', err.message, err.name);
+        });
+
+        var video = document.createElement("video");
+        video.autoplay = true;
+
+        var gridVideo = document.getElementsByClassName("grid-video");
+
+        var width =  213;
+        var height = 245;
+
+        function loop() {
+            if(playing) {
+                canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+                
+                gridVideo[0].getContext("2d").drawImage(video, 0, 0, 213, 400, 0, 0, 300, height);
+                gridVideo[1].getContext("2d").drawImage(video, 213, 0, 213, 400, 0, 0, 300, height);
+                gridVideo[2].getContext("2d").drawImage(video, 426, 0, 213, 400, 0, 0, 300, height);
+
+                gridVideo[3].getContext("2d").drawImage(video, 0, 250, 213, 400, 0, 0, 300, height);
+                gridVideo[4].getContext("2d").drawImage(video, 213, 250, 213, 400, 0, 0, 300, height);
+                gridVideo[5].getContext("2d").drawImage(video, 426, 250, 213, 400, 0, 0, 300, height);
+
+                setTimeout(loop, 1000 / 30); // drawing at 30fps
+
+            } else  {
+                clearCanvas()
+            }
+        }
+
+        function clearCanvas() {
+            canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+            gridVideo[0].getContext("2d").clearRect(video, 0, 0, 213, 400, 0, 0, 300, height);
+            gridVideo[1].getContext("2d").clearRect(video, 213, 0, 213, 400, 0, 0, 300, height);
+            gridVideo[2].getContext("2d").clearRect(video, 426, 0, 213, 400, 0, 0, 300, height);
+            gridVideo[3].getContext("2d").clearRect(video, 0, 250, 213, 400, 0, 0, 300, height);
+            gridVideo[4].getContext("2d").clearRect(video, 213, 250, 213, 400, 0, 0, 300, height);
+            gridVideo[5].getContext("2d").clearRect(video, 426, 250, 213, 400, 0, 0, 300, height);
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

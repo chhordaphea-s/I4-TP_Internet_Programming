@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="listing();">
+    <div class="add_book">
+        <p>Name:</p>
+        <input type="text" id="name" placeholder="c programming">
+
+        <p>Catagory:</p>
+        <input type="text" id="category" placeholder="coding">
+        
+        <p>Price:</p>
+        <input type="text" id="price" placeholder="40000 riels"><br>
+
+        <button id="add" onclick="addBook();">Add</button>
+    </div>
+
+    <div class="list_book" id="list_book">
+        
+    </div>
+
+    <dialog id="updateDialog">
+        <div class="dialogHeader">
+            Please input the update information 
+        </div>
+        <p>Name:</p>
+        <input type="text" id="nameD" placeholder="c programming">
+        <p>Catagory:</p>
+        <input type="text" id="categoryD" placeholder="coding">
+        <p>Price:</p>
+        <input type="text" id="priceD" placeholder="40000 riels"><br>
+        <button type="submit" id="submit">Submit</button>
+        <button id="hide">Close</button>
+    </dialog>
+</body>
+
+</html>

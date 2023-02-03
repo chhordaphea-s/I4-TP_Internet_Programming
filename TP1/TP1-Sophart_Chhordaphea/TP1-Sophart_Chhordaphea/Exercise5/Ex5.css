@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    grid-template-columns: 33.4% 33.4% 33.2%;
+    background-color:rgb(221, 221, 221);
+    height: auto;
+}
+.box{
+    display: grid;
+    background-color: rgb(25, 132, 225);
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: 1px;
+    border-radius: 5px;
+}

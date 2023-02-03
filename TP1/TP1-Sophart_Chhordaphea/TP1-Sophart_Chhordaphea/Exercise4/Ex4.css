@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.row-wrapper{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(201, 187, 187);
+}
+.column-wrapper{
+    width: 200px;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    border-radius: 5px;
+    background-color: rgb(37, 37, 208);
+    height: 30px;
+    margin: 10px;
+    justify-content: center;
+}

@@ -1,0 +1,28 @@
+.container{
+    border: 3px solid black;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.814);
+    font-size: 0.5cm;
+    height: 100px;
+    background-color: rgb(240, 130, 148);
+    margin-bottom: 10px;
+}
+.content{
+    height: 500px;
+    display: grid;
+    grid-gap: 25px 25px;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-rows: repeat(10,200px);
+    overflow-y: scroll;
+}
+.box{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 60px;
+}

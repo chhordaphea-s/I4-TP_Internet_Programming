@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Live Camera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas">
+
+        </canvas>
+        <div class="footer">
+            <p>Canvas🐯: Please show your face on me</p>                
+            <div class="btn-name">
+                <button id="playButton" title="Play">Play</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var playButton = document.getElementById("playButton");
+        playButton.addEventListener('click', buttonToggle)
+        
+            var playing = false;
+
+            function buttonToggle() {
+                console.log("Title: ", playButton.title);
+
+                if (playButton.title == "Play") {
+                    playButton.title = "Pause"
+                    document.getElementById("playButton").innerHTML = "Pause"
+                    playing = true
+                    
+                } else {
+                    playButton.title = "Play"
+                    document.getElementById("playButton").innerHTML = "Play"
+                    playing = false;
+                }
+                loop();
+            }
+
+        navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: true
+        }).then ((stream) => {
+            video.srcObject = stream;
+        }).catch((err) => {
+            console.log('navigator.MediaDevices.getUserMedia error: ', err.message, err.name);
+        });
+
+        var video = document.createElement("video");
+        video.autoplay = true;
+
+
+        function loop() {
+            if(playing) {
+                canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+                setTimeout(loop, 1000 / 30); // drawing at 30fps
+            } else  {
+                canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+    </script>
+
+</body>
+</html>
