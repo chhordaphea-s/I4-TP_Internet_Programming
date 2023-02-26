@@ -1,0 +1,76 @@
+.body {
+
+}
+
+.emoji {
+    text-align: center;
+    font-size: 100px;
+    margin-top: 80px;
+    margin-bottom: 1px;
+}
+
+.title {
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+}
+
+.title h1 {
+    display: inline-block;
+}
+
+.bluetext {
+    color: rgb(49, 108, 197);
+    margin-left: 10px;
+}
+
+.inputtext {
+    width: 200px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(179, 175, 175);
+}
+
+.guess-btn {
+    width: 75px;
+    height: 35 px;
+    font-family: 'Shantell Sans', cursive;
+    background-color: rgb(49, 108, 197);
+    color: aliceblue;
+    font-size:medium;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.guess-input {
+    text-align: center;
+}
+
+.result-block {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 15px;
+    background-color: rgb(243, 239, 239);
+    width: 280px;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(171, 162, 162);
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.result-block h4 {
+    display: inline-block;
+    margin-top: 5px;
+
+}
+
+#nationality {
+    margin-left: 10px;
+}
+
+#percent {
+    margin-right: 10px;
+}

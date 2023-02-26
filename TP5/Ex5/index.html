@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="loadBook()">
+
+    <div class="parent">
+        <div class="sideBar">
+            <div class="form-Container">
+                <form action="" method="get" class="form">
+                    <label for="name">Name: </label><br>
+                    <input type="text" name="name" id="name-input" placeholder="C Programming"><br>
+        
+                    <label for="category">Category: </label><br>
+                    <input type="text" name="category" id="category-input" placeholder="Coding"><br>
+        
+                    <label for="pice">Price: </label><br>
+                    <input type="text" name="price" id="price-input" placeholder="1,000 riel"><br>
+        
+                    <button class="add-btn" type='button'>Add</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="main" id="book-container">
+
+
+            <div id="loadingView" hidden>
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+
+            <!-- <div class="book">
+                <div class="bookIconContainer">
+
+                <img src="" alt="Book Cover">
+                    
+                </div>
+                <div class="bookInfo">
+                    <div class="book-row-container">
+                        <p class="value">${book.name}</p>
+                    </div>
+                    <div class="book-row-container">
+                        <label for="price-book-labell">AlbumID: </label>
+                        <p class="value">${book.price}</p>
+                    </div>
+                    <div class="book-row-container">
+                        <label for="category-book-label">Category: </label>
+                        <p class="value">${book.category}</p>
+                    </div>
+                </div>
+            </div> -->
+
+    
+        </div>
+    </div>
+</body>
+
+</html>

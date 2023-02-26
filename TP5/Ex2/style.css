@@ -1,0 +1,83 @@
+.body {
+
+}
+
+.emoji {
+    font-size: 7rem;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 1px;
+}
+
+.title {
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+}
+
+.title h1 {
+    display: inline-block;
+}
+
+.bluetext {
+    color: rgb(49, 108, 197);
+}
+
+.inputtext {
+    width: 200px;
+    height: 25px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(179, 175, 175);
+}
+
+.guess-btn {
+    width: 75px;
+    height: 30px;
+    font-family: 'Shantell Sans', cursive;
+    background-color: rgb(49, 108, 197);
+    color: aliceblue;
+    font-size:medium;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.guess-input {
+    text-align: center;
+}
+
+.result-block {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(243, 239, 239);
+    width: 280px;
+    height: 160px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(171, 162, 162);
+    border-radius: 10px;
+}
+
+#name {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#sex {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 37px;
+    color: rgb(222, 90, 8);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 9px;
+}
+
+#percent {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 24px;
+    color: rgb(49, 108, 197);
+    margin-top: 5px;
+    text-align: center;
+}
