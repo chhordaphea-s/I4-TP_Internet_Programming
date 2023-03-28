@@ -1,0 +1,113 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    /* width: 50%; */
+    margin: auto;
+    display: table;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* Left-Side */
+
+#dataList {
+    background-color: #cfcfcf;
+    overflow-x: auto;
+
+    width: 450px;
+    height: 89vh;
+
+    padding: 4px;
+    padding-top: 2px;
+
+    border-radius: 10px;
+    border-color: #CACACA;
+    border-style: solid;
+}
+
+#dataCell {
+    background-color: white;
+    border-radius: 10px;
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    text-align: left;
+    margin-top: 3px;
+}
+
+#dataCell :hover {
+    cursor: pointer;
+}
+
+#dataCell img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 7px;
+}
+#dataCell  #info {
+    display: inline-block;
+    margin-left: 10px;   
+}
+
+#dataCell  #info p {
+    color: #CACACA;
+    font-size: small;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+#dataCell h2 {
+    margin-top: 0px;
+    margin-bottom: -10px;
+
+    font-size: x-large;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+/* Right-Side */
+
+.dataDetail {
+    /* display: inline-block; */
+    width: 450px;
+    height: 89vh;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #E6E6E6;
+
+    margin-left: 5px;
+    
+}
+
+.dataDetail #date {
+    color: #CACACA;
+}
+
+.dataDetail #detailInfo {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#beerImage {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
