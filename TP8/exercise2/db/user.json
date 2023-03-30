@@ -1,0 +1,44 @@
+[
+    {
+        "email": "abc@gmail.com",
+        "username": "abc",
+        "firstname": "ab",
+        "lastname": "ab",
+        "password": "123456"
+    },
+    {
+        "email": "bcd@gmail.com",
+        "username": "bcd",
+        "firstname": "bc",
+        "lastname": "bc",
+        "password": "123456"
+    },
+    {
+        "email": "efg@gmail.com",
+        "username": "efg",
+        "firstname": "ef",
+        "lastname": "ef",
+        "password": "123456"
+    },
+    {
+        "email": "fgh@gmail.com",
+        "username": "fgh",
+        "firstname": "fg",
+        "lastname": "fg",
+        "password": "123456"
+    },
+    {
+        "email": "lmn@gmail.com",
+        "username": "lmn",
+        "firstname": "ab",
+        "lastname": "ab",
+        "password": "123456"
+    },
+    {
+        "email": "",
+        "username": "",
+        "firstname": "",
+        "lastname": "",
+        "password": ""
+    }
+]
