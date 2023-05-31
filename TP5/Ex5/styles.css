@@ -1,0 +1,157 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.parent {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+}
+
+.sideBar {
+    min-height: 100vh;
+    width: 200px;
+    background: rgb(224, 223, 223);
+    border-radius: 7px;
+    text-align: left;
+}
+
+.add-btn {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.form {
+    margin: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main {
+    background: rgb(224, 223, 223);
+    width: calc(100% - 210px);
+    height: 100%;
+    border-radius: 7px;
+}
+
+.book {
+    background-color: rgb(255, 255, 255);
+    width: 175px;
+    height: 350px;
+
+    border-radius: 5px;
+    border-width: 5px;
+
+    display: inline-block;
+
+    margin: 5px;    
+    
+}
+
+.book-top {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    height: 10%;
+}
+
+.bookIconContainer {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.bookIcon {
+    margin: auto;
+    /* width: 90px; */
+    /* height: 76px; */
+   
+}
+.bookInfo {
+    font-size: small;
+    line-height: 0.3;
+    margin: 10px;
+    /* margin-top: 20px; */
+    width: 88.5%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+.bookTitle {
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+.book-row-container {
+    height: 20px;    
+}
+.value {
+    display: inline-block;
+}
+
+.bookInfo a {
+    margin-top: 10px;
+}
+
+/* Loading View */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #3083FF;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #3083FF transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+/* ============================== Detail Screen ============================== */
+.header-Detail {
+    color: white;
+    height: 40vh;
+    padding-top: 20px;
+    
+    background-color: #474E5D;
+}
+
+.header-Detail h2 {
+    display: block;
+    margin-top: 30px;
+    font-size: xx-large;
+}
+
+.header-Detail p {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
